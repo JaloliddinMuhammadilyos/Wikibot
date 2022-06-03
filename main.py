@@ -2,7 +2,7 @@ from telegram.bot import Bot
 from telegram.user import User
 from telegram.ext import Updater, Dispatcher, CommandHandler, CallbackContext
 from telegram.update import Update
-from settings import settings
+import settings
 
 
 '''
