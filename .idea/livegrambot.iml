@@ -3,6 +3,37 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/env" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_internal/locations" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_internal/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/cachecontrol" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/certifi" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/chardet" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/colorama" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/distlib" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/html5lib" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/idna" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/msgpack" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/packaging" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/pep517" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/pkg_resources" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/platformdirs" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/progress" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/pygments" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/pyparsing" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/requests" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/resolvelib" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/rich" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/tenacity" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/tomli" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/urllib3" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip/_vendor/webencodings" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/setuptools/_vendor/more_itertools" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/setuptools/_distutils" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/_distutils_hack" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/pip-22.0.3.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/setuptools-60.6.0.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/wheel" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/lib/python3.9/site-packages/wheel-0.37.1.dist-info" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9 (livegrambot)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
