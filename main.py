@@ -3,7 +3,7 @@ from telegram.user import User
 from telegram.ext import Updater, Dispatcher, CommandHandler, CallbackContext
 from telegram.update import Update
 import settings
-
+import requests
 
 '''
 
@@ -29,7 +29,22 @@ def start(update: Update, context: CallbackContext):
 def search(update: Update, context: CallbackContext):
     args = context.args
     search_text = ' '.join(args)
+    response = requests.get('https://en.wikipedia.org/w/api.php', {
+        'action': 'opensearch',
+        'search': search_text,
+        'limit': 1,
+        'namespace': 0,
+        'format': 'json',
+    })
+    result = response.json()
+    link = result[3]
 
+    if len(link):
+        print(link[0])
+    else:
+        print('none')
+
+    # print(result)
 
     #print(search_text)
 
