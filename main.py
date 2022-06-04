@@ -20,15 +20,29 @@ updater = Updater(token=settings.TELEGRAM_TOKEN)
 
 
 def start(update: Update, context: CallbackContext):
-    update.message.reply_text("Salom")
-    context.bot.send_message(chat_id=update.message.chat_id, text = "Salom yana bir bor!")
+    update.message\
+        .reply_text("Assalomu alaykum! Wikipediada ma'lumot qidiruvchi"
+                    " botga hush kelibsiz! Biron nima izlash uchun "
+                    "/search va so'rovingizni yozing. /search Amir Temur")
+
+
+def search(update: Update, context: CallbackContext):
+    args = context.args
+    search_text = ' '.join(args)
+
+
+    #print(search_text)
+
+
+
+    # context.bot.send_message(chat_id=update.message.chat_id, text = "Salom yana bir bor!")
         # message classga o'rab berdi
 
 
 
 dispatcher = updater.dispatcher                            # Updater dispatcherni ichida keladi
 dispatcher.add_handler(CommandHandler("start", start))     # Va dispatcherga Handler qo'shamiz. masalan commandalarni handler qiladi
-                                                           # Start commandasini start funksiyasiga jo'natadigan yo'llanma qiladi
+dispatcher.add_handler(CommandHandler("search", search))
 
 
 
