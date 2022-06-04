@@ -40,7 +40,8 @@ def search(update: Update, context: CallbackContext):
     link = result[3]
 
     if len(link):
-        print(link[0])
+        update.message\
+            .reply_text('Sizning so\'rovingiz bo\'yicha havola: ' + link[0])
     else:
         print('none')
 
