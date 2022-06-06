@@ -6,19 +6,7 @@ import settings
 import requests
 from telegram.ext.filters import Filters
 
-'''
-
-bot = Bot(token="")
-# print(bot.get_me())
-user: User = bot.get_me()
-# print(user.link)
-'''
-
 updater = Updater(token=settings.TELEGRAM_TOKEN)
-"""python telegram bot update qilishi uchun updateni qo'ydik"""
-
-
-
 
 def start(update: Update, context: CallbackContext):
     update.message\
@@ -51,22 +39,11 @@ def search(update: Update, context: CallbackContext):
     else:
         update.message.reply_text('Sizning so\'rovingiz bo\'yicha hech nima yo\'q')
 
-    # print(result)
 
-    #print(search_text)
-
-
-
-    # context.bot.send_message(chat_id=update.message.chat_id, text = "Salom yana bir bor!")
-        # message classga o'rab berdi
-
-
-
-dispatcher = updater.dispatcher                            # Updater dispatcherni ichida keladi
-dispatcher.add_handler(CommandHandler("start", start))     # Va dispatcherga Handler qo'shamiz. masalan commandalarni handler qiladi
+dispatcher = updater.dispatcher
+dispatcher.add_handler(CommandHandler("start", start))
 dispatcher.add_handler(CommandHandler("search", search))
 dispatcher.add_handler(MessageHandler(Filters.all, start))
-
 
 updater.start_polling()
 updater.idle()
