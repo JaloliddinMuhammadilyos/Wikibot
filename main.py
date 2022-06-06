@@ -1,9 +1,10 @@
 from telegram.bot import Bot
 from telegram.user import User
-from telegram.ext import Updater, Dispatcher, CommandHandler, CallbackContext
+from telegram.ext import Updater, Dispatcher, CommandHandler, CallbackContext, MessageHandler
 from telegram.update import Update
 import settings
 import requests
+from telegram.ext.filters import Filters
 
 '''
 
@@ -28,22 +29,27 @@ def start(update: Update, context: CallbackContext):
 
 def search(update: Update, context: CallbackContext):
     args = context.args
-    search_text = ' '.join(args)
-    response = requests.get('https://en.wikipedia.org/w/api.php', {
-        'action': 'opensearch',
-        'search': search_text,
-        'limit': 1,
-        'namespace': 0,
-        'format': 'json',
-    })
-    result = response.json()
-    link = result[3]
+    if len(args)== 0:
+        update.message.\
+            reply_text("Searchdan so'ng qidirmoqchi bo'lgan narsangizni yozing")
+    else:
+
+        search_text = ' '.join(args)
+        response = requests.get('https://uz.wikipedia.org/w/api.php', {
+            'action': 'opensearch',
+            'search': search_text,
+            'limit': 1,
+            'namespace': 0,
+            'format': 'json',
+        })
+        result = response.json()
+        link = result[3]
 
     if len(link):
         update.message\
             .reply_text('Sizning so\'rovingiz bo\'yicha havola: ' + link[0])
     else:
-        print('none')
+        update.message.reply_text('Sizning so\'rovingiz bo\'yicha hech nima yo\'q')
 
     # print(result)
 
@@ -59,7 +65,7 @@ def search(update: Update, context: CallbackContext):
 dispatcher = updater.dispatcher                            # Updater dispatcherni ichida keladi
 dispatcher.add_handler(CommandHandler("start", start))     # Va dispatcherga Handler qo'shamiz. masalan commandalarni handler qiladi
 dispatcher.add_handler(CommandHandler("search", search))
-
+dispatcher.add_handler(MessageHandler(Filters.all, start))
 
 
 updater.start_polling()
