@@ -9,6 +9,7 @@ from telegram.ext.filters import Filters
 updater = Updater(token=settings.TELEGRAM_TOKEN)
 
 def start(update: Update, context: CallbackContext):
+    """ TODO bu start funksiyasidir bunda botda startni bosganda ushbu funksiya ishlaydi"""
     update.message\
         .reply_text("Assalomu alaykum! Wikipediada ma'lumot qidiruvchi"
                     " botga hush kelibsiz! Biron nima izlash uchun "
@@ -16,6 +17,7 @@ def start(update: Update, context: CallbackContext):
 
 
 def search(update: Update, context: CallbackContext):
+    """ TODO ushbu funksiya botda searchni bajarib beradi ya'ni search orqali biron narsa kiritilsa wikipwdiyadan olib beradi"""
     args = context.args
     if len(args)== 0:
         update.message.\
