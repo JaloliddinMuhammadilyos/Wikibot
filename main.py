@@ -17,7 +17,7 @@ def start(update: Update, context: CallbackContext):
 
 
 def search(update: Update, context: CallbackContext):
-    """ TODO ushbu funksiya botda searchni bajarib beradi ya'ni search orqali biron narsa kiritilsa wikipwdiyadan olib beradi"""
+    """ TODO ushbu funksiya botda searchni bajarib beradi ya'ni search orqali biron narsa kiritilsa wikipediyadan olib beradi"""
     args = context.args
     if len(args)== 0:
         update.message.\
